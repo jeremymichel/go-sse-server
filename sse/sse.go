@@ -56,6 +56,10 @@ func (b *Broker) ServeHTTP(writer http.ResponseWriter, req *http.Request) {
 	// TODO: Setup CORS as options, this is not production ready
 	writer.Header().Set("Access-Control-Allow-Origin", "*")
 
+	writer.WriteHeader(http.StatusOK)
+
+	flusher.Flush()
+
 	// Add new client
 	messageChan := b.addClient()
 
