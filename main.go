@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/jeremymichel/sse-server/sse"
+	"github.com/jeremymichel/go-sse-server/sse"
 	"log"
 	"net/http"
 )
